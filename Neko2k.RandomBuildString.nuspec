@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Neko2k.RandomBuildString</id>
+    <version>1.0.0</version>
+    <authors>binki</authors>
+    <owners>binki</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-2-Clause</licenseUrl>
+    <projectUrl>https://github.com/binki/Neko2k.RandomBuildString</projectUrl>
+    <iconUrl>http://i.imgur.com/GVlV1HW.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generate a random string every build accessible at Neko2k.BuildStrings.RandomBuildString</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>build</tags>
+    <dependencies>
+      <!-- <dependency id="SampleDependency" version="1.0" /> -->
+    </dependencies>
+  </metadata>
+</package>

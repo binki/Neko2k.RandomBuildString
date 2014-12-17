@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Neko2kRandomBuildStringFile>.neko2k.RandomBuildString.cs</Neko2kRandomBuildStringFile>
+    <Neko2kRandomBuildString>$([System.Guid]::NewGuid())</Neko2kRandomBuildString>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(Neko2kRandomBuildStringFile)">
+      <Visible>false</Visible>
+    </Compile>
+  </ItemGroup>
+  <Target BeforeTargets="BeforeCompile" Name="WriteNeko2kRandomBuildString">
+    <Delete Files="$(Neko2kRandomBuildStringFile).new"/>
+    <WriteLinesToFile File="$(Neko2kRandomBuildStringFile).new" Lines="namespace Neko2k { internal static partial class BuildStrings { public const string RandomBuildString = &quot;$(Neko2kRandomBuildString.Replace('\', '\\').Replace('&quot;', '\&quot;'))&quot;%3b; } }"/>
+    <Move DestinationFiles="$(Neko2kRandomBuildStringFile)" SourceFiles="$(Neko2kRandomBuildStringFile).new"/>
+  </Target>
+</Project>
